@@ -1,18 +1,30 @@
-## Getting Started
+## Challenges from adventofcode.com
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## 2021
 
-## Folder Structure
-
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+### Days
+- [Day 1](https://github.com/Dalton-Marshall/AdventOfCode)
+- Day 2
+- Day 3
+- Day 4
+- Day 5
+- Day 6
+- Day 7
+- Day 8
+- Day 9
+- Day 10
+- Day 11
+- Day 12
+- Day 13
+- Day 14
+- Day 15
+- Day 16
+- Day 17
+- Day 18
+- Day 19
+- Day 20
+- Day 21
+- Day 22
+- Day 23
+- Day 24
+- Day 25
