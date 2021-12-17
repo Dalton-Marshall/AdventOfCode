@@ -1,7 +1,0 @@
-{
-    "java.project.sourcePaths": [
-        "year2021/day1",
-        "year2021\\day2"
-    ],
-    "java.project.outputPath": "bin"
-}
