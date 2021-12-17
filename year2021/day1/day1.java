@@ -2,29 +2,30 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.File;
 import java.io.FileReader;
+import java.util.ArrayList;
+import java.util.List;
 
 public class day1 {
     public static void main(String[] args) {
-        System.out.println(part1());
-        System.out.println(part2());
+        int[] numbers = readFile();
+
+        System.out.println(part1(numbers));
+        System.out.println(part2(numbers));
     }
+    
+    public static int[] readFile() {
+        List<Integer> numbers = new ArrayList<>();
 
-    public static int part1() {
-        int numberIncreasing = 0;
-
-        try {
+        try{
             File file = new File("year2021/day1/day1.txt");
             FileReader in = new FileReader(file);
             BufferedReader reader = new BufferedReader(in);
-            
-            String lastLine = reader.readLine();
+
             String line = reader.readLine();
-            
+
             while(line != null) {
-                if(Integer.parseInt(line) > Integer.parseInt(lastLine))
-                    numberIncreasing++;
+                numbers.add(Integer.parseInt(line));
                 
-                lastLine = line;
                 line = reader.readLine();
             }
 
@@ -34,12 +35,31 @@ public class day1 {
             e.printStackTrace();
         }
 
+        return numbers.stream().mapToInt(x -> x).toArray();
+    }
+
+    public static int part1(int[] numbers) {
+        int numberIncreasing = 0;
+
+        for(int i = 0; i < numbers.length-1; i++) {
+            if(numbers[i] < numbers[i+1])
+                numberIncreasing++;
+        }
+
         return numberIncreasing;
     }
 
-    public static int part2() {
-        int x = 0;
+    public static int part2(int[] numbers) {
+        int numberIncreasing = 0;
 
-        return x;
+        for(int i = 0; i < numbers.length - 3; i++) {
+            int set1Sum = numbers[i] + numbers[i+1] + numbers[i+2];
+            int set2Sum = numbers[i+1] + numbers[i+2] + numbers[i+3];
+
+            if(set1Sum < set2Sum)
+                numberIncreasing++;
+        }
+
+        return numberIncreasing;
     }
 }

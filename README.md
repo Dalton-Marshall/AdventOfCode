@@ -3,8 +3,8 @@
 ## 2021
 
 ### Days
-- [Day 1](https://github.com/Dalton-Marshall/AdventOfCode)
-- Day 2
+- [Day 1](https://github.com/Dalton-Marshall/AdventOfCode/blob/main/year2021/day1/day1.java) :: [Challenge](https://adventofcode.com/2021/day/1)
+- [Day 2](https://github.com/Dalton-Marshall/AdventOfCode/blob/main/year2021/day2/day2.java) :: [Challenge](https://adventofcode.com/2021/day/2)
 - Day 3
 - Day 4
 - Day 5
