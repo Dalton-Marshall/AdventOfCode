@@ -3,6 +3,8 @@ import java.io.IOException;
 import java.io.File;
 import java.io.FileReader;
 import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.List;
 
 public class day3 {
     public static void main(String[] args) {
@@ -61,6 +63,38 @@ public class day3 {
     }
 
     public static int part2() {
-        return 0;
+        int co2Rating = 0;
+        int oxyRating = 0;
+        
+        List<String> oxy = new ArrayList<>();
+        List<String> co2 = new ArrayList<>();
+
+        try{
+            File file = new File("year2021/day3/day3.txt");
+            FileReader in = new FileReader(file);
+            BufferedReader reader = new BufferedReader(in);
+
+            String line = reader.readLine();
+            int numBits = line.length();
+            int numRecords = 0;
+            int[] tracker = new int[numBits];
+            int positionToCheck = 0;
+
+            while(line != null) {
+                numRecords++;
+
+                oxy.add(line);
+                co2.add(line);
+
+                line = reader.readLine();
+            }
+            
+            reader.close();
+        } catch(IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
+
+        return co2Rating * oxyRating;
     }
 }
